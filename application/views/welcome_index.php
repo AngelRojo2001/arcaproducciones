@@ -3,7 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Arca Producciones</title>
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap-theme.min.css">
@@ -12,40 +15,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#top">
-                    Arca Producciones
-                </a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#nosotros-wrapper">Nosotros</a></li>
-                    <li><a href="#contacto-wrapper">Contacto</a></li>
-                    <li class="iconos"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                    <li class="iconos"><a href="#"><i class="fa fa-envelope fa-2x"></i></a></li>
-                    <li class="dropdown iconos">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <i class="fa fa-share-alt-square fa-2x"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- generado por http://www.sharelinkgenerator.com/ -->
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//web.facebook.com/danny.almanzaamaru" target="_blank"><i class="fa fa-facebook-square fa-2x"></i> Comparte en Facebook</a></li>
-                            <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i> Comparte en Twitter</a></li>
-                            <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i> Comparte en LinkedIn</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">Arca Producciones</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav navbar-right">
+	                <li><a href="#">Nosotros</a></li>
+	                <li><a href="#">Contacto</a></li>
+	                <li class="iconos"><a href="#"><i class="fa fa-facebook-square fa-1x"></i></a></li>
+	                <li class="iconos"><a href="#"><i class="fa fa-envelope fa-1x"></i></a></li>
+	                <li class="dropdown iconos">
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	                        <i class="fa fa-share-alt-square fa-1x"></i>
+	                    </a>
+	                    <ul class="dropdown-menu">
+	                        <!-- generado por http://www.sharelinkgenerator.com/ -->
+	                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//web.facebook.com/danny.almanzaamaru" target="_blank"><i class="fa fa-facebook-square fa-2x"></i> Comparte en Facebook</a></li>
+	                        <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i> Comparte en Twitter</a></li>
+	                        <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i> Comparte en LinkedIn</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div><!--/.nav-collapse -->
+      	</div>
     </nav>
+
     <header>
     	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     	  <!-- Indicators -->
@@ -57,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	  <!-- Wrapper for slides -->
     	  <div class="carousel-inner" role="listbox">
     	    <div class="item active">
-    	      <img src="public/img/arca1.jpg" alt="Imagen 1">
+    	      <img src="public/img/arca1.jpg" alt="Imagen 1" height="50">
     	      <div class="carousel-caption">
     	        <p></p>
     	      </div>
