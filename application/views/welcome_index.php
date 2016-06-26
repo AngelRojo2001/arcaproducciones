@@ -12,7 +12,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/custom.css">
-	
 </head>
 <body>
     <!-- Fixed navbar -->
@@ -108,37 +107,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
       <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Cursos de Teclado <span class="text-muted">100% Práctico</span></h2>
-          <p class="lead">Ofrecemos nuestro curso de teclado orientado a aquellas personas que quieren aprender a tocar en el estilo Folkrock como los ministerios de alabanza.
-          Con este curso aprenderas todo lo necesario para que puedas tocar, programar tu teclado, creación de tus propios sonidos, componer tus propias alabanzas y asi sean verdaderos adoradores del Señor.</p>
-          <h2 class="featurette-heading"><span class="text-muted">Informes y Reservas: 76226372 - 70538241</span></h2>
+      <?php $sw = 0; ?>
+      <?php foreach ($publicaciones as $publicacion) : ?>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-7 <?php echo ($sw != 0)?'col-md-push-5':'' ?>">
+            <h2 class="featurette-heading"><?php echo $publicacion->titulo; ?> <span class="text-muted"><?php echo $publicacion->subtitulo; ?></span></h2>
+            <p class="lead"><?php echo $publicacion->descripcion; ?></p>
+          </div>
+          <div class="col-md-5 <?php echo ($sw != 0)?'col-md-pull-7':'' ?>">
+            <img data-holder-rendered="true" src="public/img/<?php echo $publicacion->imagen; ?>" class="featurette-image img-responsive center-block" alt="500x500">
+          </div>
         </div>
-        <div class="col-md-5">
-          <img data-holder-rendered="true" src="public/img/arca4.jpg" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Nuestras novedades <span class="text-muted">Muy pronto...</span></h2>
-          <p class="lead"></p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img data-holder-rendered="true" src="public/img/arca3.jpg" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500">
-        </div>
-      </div>
+        <?php $sw = 1; ?>
+      <?php endforeach; ?>
 
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
