@@ -2,7 +2,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Agregar Publicación</h1>
+                <h1 class="page-header">Editar Publicación</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -15,24 +15,26 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <?= form_open_multipart(); ?>
-                            <div class="form-group">
-                                <?= form_label('Título', 'titulo'); ?>
-                                <?= form_input('titulo', set_value('titulo',$publicacion->titulo), ['class'=>'form-control', 'placeholder'=>'Ingresar Título']); ?>
-                            </div>
-                            <div class="form-group">
-                                <?= form_label('Subtítulo', 'subtitulo'); ?>
-                                <?= form_input('subtitulo', '', ['class'=>'form-control', 'placeholder'=>'Ingresar Subtítulo']); ?>
-                            </div>
-                            <div class="form-group">
-                                <?= form_label('Descripción', 'descripcion'); ?>
-                                <?= form_textarea(['name'=>'descripcion', 'rows'=>'3'], '', ['class'=>'form-control', 'placeholder'=>'Ingresar Descripción']); ?>
-                            </div>
-                            <div class="form-group">
-                                <?= form_label('Imagen', 'imagen'); ?>
-                                <?= form_upload('imagen', ''); ?>
-                            </div>
-                            <?= form_submit('', 'Agregar Publicación', ['class'=>'btn btn-success']); ?>
+                        <?php if ($publicacion->imagen == NULL) { ?>
+                            <?= form_open_multipart('publicacion/editar/'.$publicacion->id); ?>
+                        <?php } else { ?>
+                            <?= form_open('publicacion/editar/'.$publicacion->id); ?>
+                        <?php } ?>
+                        
+                            <?php $this->load->view('admin/publicacion/form.php') ?>
+                            <?php if ($publicacion->imagen == NULL) { ?>
+                                <div class="form-group">
+                                    <?= form_label('Imagen', 'imagen'); ?>
+                                    <?= form_upload('imagen', ''); ?>
+                                </div>
+                            <?php } else { ?>
+                                <div class="form-group">
+                                    <img src="<?= base_url('public/img/'.$publicacion->imagen); ?>" class="img-responsive">
+                                    <a href="<?= site_url('publicacion/eliminar_imagen/'.$publicacion->id) ?>" class="btn btn-danger" id="btn-eliminar">Eliminar Imagen</a>
+                                </div>
+                            <?php } ?>
+                            
+                            <?= form_submit('', 'Editar Publicación', ['class'=>'btn btn-success']); ?>
                         <?= form_close(); ?>
                     </div>
                     <!-- /.panel-body -->

@@ -15,28 +15,16 @@
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <?php
-                        if(isset($error)){
-                            echo $error;
-                        }
-                        ?>
-                        <?= validation_errors(); ?>
-                        <?= form_open_multipart(); ?>
-                            <div class="form-group">
-                                <?= form_label('Título', 'titulo'); ?>
-                                <?= form_input('titulo', set_value('titulo',@$publicacion->titulo), ['class'=>'form-control', 'placeholder'=>'Ingresar Título']); ?>
-                            </div>
-                            <div class="form-group">
-                                <?= form_label('Subtítulo', 'subtitulo'); ?>
-                                <?= form_input('subtitulo', set_value('subtitulo',@$publicacion->subtitulo), ['class'=>'form-control', 'placeholder'=>'Ingresar Subtítulo']); ?>
-                            </div>
-                            <div class="form-group">
-                                <?= form_label('Descripción', 'descripcion'); ?>
-                                <?= form_textarea(['name'=>'descripcion', 'rows'=>'3'], set_value('descripcion',@$publicacion->descripcion), ['class'=>'form-control', 'placeholder'=>'Ingresar Descripción']); ?>
-                            </div>
+                        <?= form_open_multipart('publicacion/agregar'); ?>
+                            <?php $this->load->view('admin/publicacion/form.php') ?>
                             <div class="form-group">
                                 <?= form_label('Imagen', 'imagen'); ?>
                                 <?= form_upload('imagen', ''); ?>
+                                <?php
+                                if(isset($error)){
+                                    echo '<span style="color:red;">' . $error . '</span>';
+                                }
+                                ?>
                             </div>
                             <?= form_submit('', 'Agregar Publicación', ['class'=>'btn btn-success']); ?>
                         <?= form_close(); ?>

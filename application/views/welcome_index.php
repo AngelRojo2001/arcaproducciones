@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/custom.css">
+  <link rel="icon" type="image/icon" href="public/img/favicon.ico" />
 </head>
 <body>
     <!-- Fixed navbar -->
@@ -30,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	            <ul class="nav navbar-nav navbar-right">
 	                <li><a href="#">Nosotros</a></li>
 	                <li><a href="#">Contacto</a></li>
-	                <li class="iconos"><a href="#"><i class="fa fa-facebook-square fa-1x"></i></a></li>
+	                <li class="iconos"><a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-1x"></i></a></li>
 	                <li class="iconos"><a href="#"><i class="fa fa-envelope fa-1x"></i></a></li>
 	                <li class="dropdown iconos">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -119,7 +120,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <img data-holder-rendered="true" src="public/img/<?php echo $publicacion->imagen; ?>" class="featurette-image img-responsive center-block" alt="500x500">
           </div>
         </div>
-        <?php $sw = 1; ?>
+        <?php
+          if ($sw == 0) {
+            $sw = 1;
+          } else {
+            $sw = 0;
+          }
+        ?>
       <?php endforeach; ?>
 
       <hr class="featurette-divider">

@@ -10,12 +10,8 @@
         <!-- Metis Menu Plugin JavaScript -->
         <script src="<?= base_url('public/js/metisMenu.min.js'); ?>"></script>
 
-        <!-- Morris Charts JavaScript -->
-        <script src="<?= base_url('public/js/raphael-min.js'); ?>"></script>
-        <script src="<?= base_url('public/js/morris.min.js'); ?>"></script>
-        <script src="<?= base_url('public/js/morris-data.js'); ?>"></script>
-
         <!-- Custom Theme JavaScript -->
         <script src="<?= base_url('public/js/sb-admin-2.js'); ?>"></script>
+        <script src="<?= base_url('public/js/custom.js'); ?>"></script>
     </body>
 </html>
