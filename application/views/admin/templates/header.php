@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Administración</title>
+        <title><?= $title; ?></title>
         <!-- Bootstrap Core CSS -->
         <link href="<?= base_url('public/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                    <a class="navbar-brand" href="<?= site_url('publicacion'); ?>">Administrar</a>
                 </div>
                 <!-- /.navbar-header -->
 
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                            <li><a href="<?= base_url(); ?>"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -88,19 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="<?= site_url('publicacion'); ?>"><i class="fa fa-dashboard fa-fw"></i> Publicaciones</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="flot.html">Flot Charts</a>
-                                    </li>
-                                    <li>
-                                        <a href="morris.html">Morris.js Charts</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
+                                <a href="<?= site_url('publicacion'); ?>"><i class="fa fa-book"></i> Publicaciones</a>
                             </li>
                         </ul>
                     </div>

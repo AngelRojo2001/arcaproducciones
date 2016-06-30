@@ -7,7 +7,7 @@ function inicializar() {
 }
 
 function confirmar() {
-	var eliminar = confirm('Realmente deseas eliminar este item?');
+	var eliminar = confirm('¿Realmente deseas eliminar la imagen?');
 	if (!eliminar) {
 		return false;
 	}

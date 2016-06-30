@@ -26,11 +26,16 @@
                                 <div class="form-group">
                                     <?= form_label('Imagen', 'imagen'); ?>
                                     <?= form_upload('imagen', ''); ?>
+                                    <?php
+                                    if(isset($error)){
+                                        echo '<span style="color:red;">' . $error['error'] . '</span>';
+                                    }
+                                    ?>
                                 </div>
                             <?php } else { ?>
                                 <div class="form-group">
                                     <img src="<?= base_url('public/img/'.$publicacion->imagen); ?>" class="img-responsive">
-                                    <a href="<?= site_url('publicacion/eliminar_imagen/'.$publicacion->id) ?>" class="btn btn-danger" id="btn-eliminar">Eliminar Imagen</a>
+                                    <a href="<?= site_url('publicacion/eliminar_imagen/'.$publicacion->id); ?>" class="btn btn-danger" id="btn-eliminar">Eliminar Imagen</a>
                                 </div>
                             <?php } ?>
                             

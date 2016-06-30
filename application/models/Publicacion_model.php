@@ -36,6 +36,21 @@ class Publicacion_model extends CI_Model
 		$this->db->insert('publicacion', $data);
 	}
 
+	public function update($id, $imagen = NULL)
+	{
+		$data = array(
+			'titulo' => $this->input->post('titulo'),
+			'subtitulo' => $this->input->post('subtitulo'),
+			'descripcion' => $this->input->post('descripcion'),
+			'fechapub' => now('America/La_Paz')
+		);
+		if ($imagen != NULL) {
+			$data['imagen'] = $imagen;
+		}
+		$this->db->where('id', $id);
+		$this->db->update('publicacion', $data);
+	}
+
 	public function delete($id)
 	{
 		$this->db->where('id', $id);

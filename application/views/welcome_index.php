@@ -25,25 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#">Arca Producciones</a>
+	          <a class="navbar-brand" href="<?= base_url(); ?>">Arca Producciones</a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	            <ul class="nav navbar-nav navbar-right">
-	                <li><a href="#">Nosotros</a></li>
-	                <li><a href="#">Contacto</a></li>
 	                <li class="iconos"><a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-1x"></i></a></li>
-	                <li class="iconos"><a href="#"><i class="fa fa-envelope fa-1x"></i></a></li>
-	                <li class="dropdown iconos">
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	                        <i class="fa fa-share-alt-square fa-1x"></i>
-	                    </a>
-	                    <ul class="dropdown-menu">
-	                        <!-- generado por http://www.sharelinkgenerator.com/ -->
-	                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//web.facebook.com/danny.almanzaamaru" target="_blank"><i class="fa fa-facebook-square fa-2x"></i> Comparte en Facebook</a></li>
-	                        <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i> Comparte en Twitter</a></li>
-	                        <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i> Comparte en LinkedIn</a></li>
-	                    </ul>
-	                </li>
+                  <li><a href="<?= site_url('publicacion'); ?>"><i class="fa fa-sign-in"></i> Ingresar</a></li>
 	            </ul>
 	        </div><!--/.nav-collapse -->
       	</div>
@@ -95,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-lg-4">
           <img class="img-circle" src="public/img/teclado1.jpg" alt="Generic placeholder image" height="140" width="140">
           <h2>Provervios 17:17</h2>
-          <p>En todo Tiempo ama al amigo y es como un hermano en tiempos de angustiA</p>
+          <p>En todo Tiempo ama al amigo y es como un hermano en tiempos de angustia</p>
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">

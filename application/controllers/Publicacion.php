@@ -6,71 +6,89 @@ class Publicacion extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(array('form', 'date'));
+		$this->load->helper('form');
+		$this->load->helper('date');
+		$config['upload_path'] = './public/img/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$this->load->library('upload', $config);
 		$this->load->library('form_validation');
 		$this->load->model('publicacion_model');
 	}
 
 	public function index()
 	{
+		$data['title'] = 'Publicación';
 		$data['publicaciones'] = $this->publicacion_model->get();
 		$this->load->view('admin/publicacion/index', $data);
 	}
-	
+
 	public function agregar()
 	{
+		$data['title'] = 'Agregar Publicación';
 		if($this->input->post())
 		{
-			$this->form_validation->set_rules('titulo', 'Título', 'required|max_length[45]');
-			$this->form_validation->set_rules('subtitulo', 'Subtítulo', 'max_length[45]');
-			if($this->form_validation->run() == FALSE)
+			$this->set_rules();
+			if($this->form_validation->run() != FALSE)
 			{
-				$this->load->view('admin/publicacion/insert');
-			}
-			else {
-				$config['upload_path']          = './public/img/';
-				$config['allowed_types']        = 'gif|jpg|png';
-				$this->load->library('upload', $config);
-				if ( ! $this->upload->do_upload('imagen'))
-				{
-				    $error = array('error' => $this->upload->display_errors());
-				    $this->load->view('admin/publicacion/insert', $error);
+				if ( ! $this->upload->do_upload('imagen')) {
+				    $data['error'] = array('error' => $this->upload->display_errors());
+				    return $this->load->view('admin/publicacion/insert', $data);
 				}
-				else
-				{
-				    $data = $this->upload->data();
-				    //var_dump($data['file_name']);
-				    $this->publicacion_model->insert($data['file_name']);
+				else {
+				    $file = $this->upload->data();
+				    $this->publicacion_model->insert($file['file_name']);
 				    redirect(site_url('publicacion'));
 				}
 			}
 		}
-		else
-		{
-			$this->load->view('admin/publicacion/insert');
-		}
+		$this->load->view('admin/publicacion/insert', $data);
 	}
 
 	public function editar($id)
 	{
 		if (is_numeric($id) && $id > 0) {
+			$data['title'] = 'Editar Publicación';
 			$data['publicacion'] = $this->publicacion_model->find($id);
-			$this->load->view('admin/publicacion/update', $data);
+			if ($this->input->post()) {
+				$this->set_rules();
+				if($this->form_validation->run() != FALSE)
+				{
+					if ($data['publicacion']->imagen != NULL) {
+						$this->publicacion_model->update($id);
+					} else {
+						if ( ! $this->upload->do_upload('imagen')) {
+						    $data['error'] = array('error' => $this->upload->display_errors());
+						    return $this->load->view('admin/publicacion/update', $data);
+						}
+						else {
+						    $file = $this->upload->data();
+						    $this->publicacion_model->update($id, $file['file_name']);
+						}
+					}
+					redirect(site_url('publicacion'));
+				}
+			}
+			return $this->load->view('admin/publicacion/update', $data);
 		}
-		else {
-			redirect(site_url('publicacion'));
-		}
+		redirect(site_url('publicacion'));
 	}
 
 	public function eliminar($id)
 	{
 		if (is_numeric($id) && $id > 0) {
-			$publicacion = $this->publicacion_model->find($id);
-			unlink('./public/img/'.$publicacion->imagen);
-			$this->publicacion_model->delete($id);
+			$data['title'] = 'Eliminar Publicación';
+			$data['publicacion'] = $this->publicacion_model->find($id);
+			if (!$this->input->post()) {
+				return $this->load->view('admin/publicacion/delete', $data);
+			}
+			else {
+				unlink('./public/img/'.$data['publicacion']->imagen);
+				$this->publicacion_model->delete($id);
+			}
 		}
 		redirect(site_url('publicacion'));
 	}
+
 
 	public function eliminar_imagen($id)
 	{
@@ -83,12 +101,9 @@ class Publicacion extends CI_Controller
 		redirect(site_url('publicacion'));
 	}
 
-	public function prueba()
+	public function set_rules()
 	{
-		echo date('Y-m-d H:i:s');
-		echo '<br>';
-		$datestring = '%Y-%m-%d %H:%i %s';
-		echo now('America/La_Paz');
-		//echo mdate($datestring, $time);
+		$this->form_validation->set_rules('titulo', 'Título', 'required|max_length[45]');
+		$this->form_validation->set_rules('subtitulo', 'Subtítulo', 'max_length[45]');
 	}
 }
