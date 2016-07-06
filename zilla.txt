@@ -8,7 +8,10 @@ ftp.arcaproducciones.esy.es
 u222995670.alejandra
 ardnajela_r
 
-
+mysql.hostinger.es
+u222995670_arcap
+u222995670_alemv
+ardnajela1611
 
 
 
