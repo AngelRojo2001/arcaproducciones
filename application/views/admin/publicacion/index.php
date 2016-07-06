@@ -30,7 +30,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="<?= site_url('publicacion/editar/'.$publicacion->id); ?>" class="btn btn-warning">Editar</a>
-                                <a href="<?= site_url('publicacion/eliminar/'.$publicacion->id); ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="<?= site_url('publicacion/eliminar/'.$publicacion->id); ?>" class="btn btn-danger btn-eliminar">Eliminar</a>
                             </div>
                         </div>
                         <!-- /.panel-body -->

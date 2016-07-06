@@ -29,8 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	            <ul class="nav navbar-nav navbar-right">
-	                <li class="iconos"><a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-1x"></i></a></li>
-                  <li><a href="<?= site_url('publicacion'); ?>"><i class="fa fa-sign-in"></i> Ingresar</a></li>
+	                <li class="iconos"><a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                  <li class="iconos"><a href="<?= site_url('publicacion'); ?>"><i class="fa fa-lock fa-2x"></i></a></li>
 	            </ul>
 	        </div><!--/.nav-collapse -->
       	</div>
@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	  <!-- Wrapper for slides -->
     	  <div class="carousel-inner" role="listbox">
     	    <div class="item active">
-    	      <img src="public/img/arca1.jpg" alt="Imagen 1" height="50">
+    	      <img src="public/img/arca1.jpg" alt="Imagen 1">
     	      <div class="carousel-caption">
     	        <p></p>
     	      </div>
@@ -61,11 +61,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Controls -->
     	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    	    <span class="sr-only">Previous</span>
+    	    <span class="sr-only">Anterior</span>
     	  </a>
     	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
     	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    	    <span class="sr-only">Next</span>
+    	    <span class="sr-only">Siguiente</span>
     	  </a>
     	</div>
     </header>

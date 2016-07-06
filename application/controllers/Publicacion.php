@@ -78,13 +78,8 @@ class Publicacion extends CI_Controller
 		if (is_numeric($id) && $id > 0) {
 			$data['title'] = 'Eliminar Publicación';
 			$data['publicacion'] = $this->publicacion_model->find($id);
-			if (!$this->input->post()) {
-				return $this->load->view('admin/publicacion/delete', $data);
-			}
-			else {
-				unlink('./public/img/'.$data['publicacion']->imagen);
-				$this->publicacion_model->delete($id);
-			}
+			unlink('./public/img/'.$data['publicacion']->imagen);
+			$this->publicacion_model->delete($id);
 		}
 		redirect(site_url('publicacion'));
 	}
