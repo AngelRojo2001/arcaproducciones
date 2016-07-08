@@ -54,6 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                 <!-- /.navbar-header -->
 
                 <ul class="nav navbar-top-links navbar-right">
+                    <li><a href="<?= base_url(); ?>"><i class="fa fa-home fa-fw"></i> Portada</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -61,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                         <ul class="dropdown-menu dropdown-user">
                             <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil de usuario</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
                             </li>
                             <li class="divider"></li>
                             <li><a href="<?= site_url('login/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> Salir</a>

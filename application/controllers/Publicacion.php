@@ -6,19 +6,14 @@ class Publicacion extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('session');
-		$this->load->helper('form');
-		$this->load->helper('date');
-		$config['upload_path'] = './public/img/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$this->load->library('upload', $config);
-		$this->load->library('form_validation');
-		$this->load->model('publicacion_model');
-
-
 		if (!$this->session->userdata('is_logued')) {
 			redirect(base_url());
 		}
+		$config['upload_path'] = './public/img/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$this->load->helper('date');
+		$this->load->library('upload', $config);
+		$this->load->model('publicacion_model');
 	}
 
 	public function index()

@@ -29,7 +29,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        <div id="navbar" class="navbar-collapse collapse">
 	            <ul class="nav navbar-nav navbar-right">
 	            	<li class="iconos"><a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-	            	<li class="iconos"><a href="<?= site_url('login'); ?>"><i class="fa fa-lock fa-2x"></i></a></li>
+	            	<?php if ($this->session->userdata('is_logued')) { ?>
+	            		<li class="dropdown iconos">
+	            		    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	            		        <i class="fa fa-user fa-fw fa-2x"></i>  <i class="fa fa-caret-down"></i>
+	            		    </a>
+	            		    <ul class="dropdown-menu dropdown-user">
+	            		        <li><a href="<?= site_url('publicacion'); ?>"><i class="fa fa-gear fa-fw fa-2x"></i> Administrar</a></li>
+	            		        <li class="divider"></li>
+	            		        <li><a href="<?= site_url('login/logout'); ?>"><i class="fa fa-sign-out fa-fw fa-2x"></i> Salir</a></li>
+	            		    </ul>
+	            		</li>
+	            	<?php } else { ?>
+	            		<li class="iconos"><a href="<?= site_url('login'); ?>"><i class="fa fa-lock fa-2x"></i></a></li>
+	            	<?php } ?>
 	            </ul>
 	        </div><!--/.nav-collapse -->
       	</div>
