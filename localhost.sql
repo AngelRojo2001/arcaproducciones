@@ -25,18 +25,19 @@ insert into publicacion (id, titulo, subtitulo, descripcion, imagen, fechapub) v
 
 create table usuario (
   id int unsigned auto_increment,
-  email varchar(50) not null,
-  password varchar(50) not null,
-  nombres varchar(30),
-  apellidos varchar(50),
+  email varchar(50) NOT NULL,
+  password varchar(50) NOT NULL,
+  nombres varchar(30) DEFAULT NULL,
+  apellidos varchar(50) DEFAULT NULL,
   categoria enum('superadmin', 'admin') not null,
-  active tinyint(1) not null default 1,
+  active tinyint(1) NOT NULL DEFAULT 1,
   primary key(id)
 );
 
 insert into usuario values
 (NULL, 'almanza.danny@gmail.com', '7cf0ba0ed16485700bef1a3acfb3d6236a79f550', 'Danny', 'Almanza Amaru', 'superadmin', 1),
-(NULL, 'ale.r1611@gmail.com', '07fbe2912e022c097628b3867316e78449a8bcdf', 'Alejandra', 'Mujica Villa', 'superadmin', 1);
+(NULL, 'ale.r1611@gmail.com', '07fbe2912e022c097628b3867316e78449a8bcdf', 'Alejandra', 'Mujica Villa', 'superadmin', 1),
+(NULL, 'jes_rey33@hotmail.com', 'f743aa7865d5375afd65465e9263fcf2f77c5743', 'Reynaldo', 'Mujica Villa', 'admin', 1);
 
 CREATE TABLE `audio` (
   `idaudio` int(11) NOT NULL,
