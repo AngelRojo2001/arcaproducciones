@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="<?= base_url(); ?>"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                            <li><a href="<?= site_url('login/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->

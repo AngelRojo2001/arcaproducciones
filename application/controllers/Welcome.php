@@ -11,8 +11,8 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-		//echo date('Y-m-d H:i:s');
+		$data['title'] = 'Arca Producciones';
 		$data['publicaciones'] = $this->publicacion_model->get();
-		$this->load->view('welcome_index', $data);
+		$this->load->view('public/index', $data);
 	}
 }

@@ -20,3 +20,13 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.login {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+span.error {
+	color: red;
+	background: red;
+}
