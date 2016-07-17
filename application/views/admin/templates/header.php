@@ -90,6 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                             </li>
                             <li>
                                 <a href="<?= site_url('publicacion'); ?>"><i class="fa fa-book"></i> Publicaciones</a>
+                                <a href="<?= site_url('video'); ?>"><i class="fa fa-film"></i> Videos</a>
                             </li>
                         </ul>
                     </div>

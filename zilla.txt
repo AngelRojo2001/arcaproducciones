@@ -24,9 +24,5 @@ http://www.ustream.tv/channel/WmHAmBmXGwB#itm_campaign=broadcast_interstitial&it
 
 http://www.futbolenvivoaldia.com/2012/08/fox-sports-en-vivo.html
 
-
-git remote add origin https://github.com/AngelRojo2001/arcaproducciones.git
-git push -u origin master
-
 ale.r1611@gmail.com
 ardnajela1611
