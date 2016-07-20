@@ -1,4 +1,5 @@
 <?php $this->load->view('public/templates/header'); ?>
+<?php $this->load->view('public/templates/slider'); ?>
 
 <div class="container marketing">
 
