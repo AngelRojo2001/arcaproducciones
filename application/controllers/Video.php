@@ -36,11 +36,33 @@ class Video extends CI_Controller
 		$this->load->view('admin/video/insert', $data);
 	}
 
-	public function editar() {
-		echo sha1('reynaldo123456');
+	public function editar($id)
+	{
+		if (is_numeric($id) && $id > 0) {
+			$data['title'] = 'Editar Video';
+			$data['video'] = $this->video_model->find($id);
+			if ($this->input->post('editar')) {
+				$this->set_rules();
+				if($this->form_validation->run() != FALSE)
+				{
+					$this->video_model->update($id);
+					redirect(site_url('video'));
+				}
+			}
+			return $this->load->view('admin/video/update', $data);
+		}
+		redirect(site_url('video'));
 	}
 
-	public function eliminar() {}
+	public function eliminar($id)
+	{
+		if (is_numeric($id) && $id > 0) {
+			$data['title'] = 'Eliminar Video';
+			$data['video'] = $this->video_model->find($id);
+			$this->video_model->delete($id);
+		}
+		redirect(site_url('video'));
+	}
 
 	public function set_rules()
 	{

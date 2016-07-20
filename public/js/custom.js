@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('.btn-eliminar').click(function() {
-		var eliminar = confirm('¿Realmente deseas eliminar la publicación?');
+		var eliminar = confirm('¿Realmente deseas eliminar?');
 		if (!eliminar) {
 			return false;
 		}

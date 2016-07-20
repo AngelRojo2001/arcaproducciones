@@ -14,7 +14,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <?php foreach ($videos as $video) { ?>
+            <?php foreach ($videos as $video): ?>
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -22,8 +22,18 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="col-lg-12">
-                                <?= $video->url_video; ?>
+                            <div class="col-lg-5">
+                                <h1><?= $video->titulo; ?></h1>
+                                <h2><?= $video->autor; ?></h2>
+                            </div>
+                            <div class="col-lg-7">
+                                <?php
+                                $enlaces = explode('=', $video->url_video);
+                                $link = explode('&', $enlaces[1]);
+                                ?>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/<?= $link[0]; ?>" frameborder="0" allowfullscreen></iframe>
+                                </div>
                             </div>
                             <div class="col-lg-12">
                                 <a href="<?= site_url('video/editar/'.$video->id); ?>" class="btn btn-warning">Editar</a>
@@ -35,7 +45,7 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
-            <?php } ?>
+            <?php endforeach; ?>
             <!-- endforeach -->
         </div>
         <!-- /.row -->
