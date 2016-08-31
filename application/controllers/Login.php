@@ -12,8 +12,10 @@ class Login extends CI_Controller {
     public function index() {
         $data['title'] = 'Iniciando sesión';
         switch ($this->session->categoria) {
-            case 'superadmin':
-            case 'admin':
+            case 1:
+                redirect(site_url('menu'));
+                break;
+            case 2:
                 redirect(site_url('publicacion'));
                 break;
             default:
@@ -25,7 +27,7 @@ class Login extends CI_Controller {
     public function user_verificate() {
         if ($this->input->post('login')) {
             $this->form_validation->set_rules('email','E-mail','required|valid_email');
-            $this->form_validation->set_rules('password','Password','required|min_length[6]|max_length[50]|alpha_numeric');
+            $this->form_validation->set_rules('password','Password','required|min_length[6]|max_length[50]');
             if ($this->form_validation->run() == FALSE) {
                 $this->index();
             }
@@ -33,11 +35,10 @@ class Login extends CI_Controller {
                 $check_user = $this->usuario_model->verificar();
                 if ($check_user) {
                     $data = array(
-                        'is_logued' => TRUE,
+                        'logued' => TRUE,
                         'id' => $check_user->id,
                         'categoria' => $check_user->categoria,
                         'nombres' => $check_user->nombres,
-                        'apellidos' => $check_user->apellidos,
                     );
                     $this->session->set_userdata($data);
                     $this->index();

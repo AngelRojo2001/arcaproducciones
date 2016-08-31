@@ -10,7 +10,7 @@ class Publicacion extends CI_Controller {
         $this->load->library('upload', $config);
         $this->load->library('form_validation');
         $this->load->model('publicacion_model');
-        if (!$this->session->userdata('is_logued')) {
+        if (!$this->session->userdata('logued')) {
             redirect(base_url());
         }
     }
