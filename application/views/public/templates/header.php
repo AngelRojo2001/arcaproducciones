@@ -29,7 +29,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?= base_url() ?>">Inicio</a></li>
+                    <li><a href="<?= site_url('welcome/videos') ?>">Quienes Somos</a></li>
+                    <li><a href="<?= site_url('welcome/videos') ?>">Cursos</a></li>
+                    <li><a href="<?= site_url('welcome/videos') ?>">Contactos</a></li>
+                    <li><a href="<?= site_url('welcome/videos') ?>">Audio</a></li>
                     <li><a href="<?= site_url('welcome/videos') ?>">Videos</a></li>
+                    <li><a href="<?= site_url('welcome/videos') ?>">Ventas</a></li>
                     <li class="iconos">
                         <a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
