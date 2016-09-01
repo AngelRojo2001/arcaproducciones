@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-comment fa-fw"></i> <?= $video->titulo . ' - ' . $video->autor; ?>
+                            <i class="fa fa-film fa-fw"></i> <?= $video->titulo . ' - ' . $video->autor; ?>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

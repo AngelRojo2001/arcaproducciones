@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-comment fa-fw"></i> <?= $publicacion->titulo . ' - ' . $publicacion->subtitulo; ?>
+                            <i class="fa fa-book fa-fw"></i> <?= $publicacion->titulo . ' - ' . $publicacion->subtitulo; ?>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

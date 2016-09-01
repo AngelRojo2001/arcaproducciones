@@ -12,10 +12,8 @@ class Login extends CI_Controller {
     public function index() {
         $data['title'] = 'Iniciando sesión';
         switch ($this->session->categoria) {
-            case 1:
-                redirect(site_url('menu'));
-                break;
-            case 2:
+            case 'superadmin':
+            case 'admin':
                 redirect(site_url('publicacion'));
                 break;
             default:

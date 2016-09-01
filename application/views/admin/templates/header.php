@@ -13,21 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed')
         <link href="<?= base_url('public/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
-        <link href="<?= base_url('public/css/metisMenu.min.css'); ?>" rel="stylesheet">
-
-        <!-- Timeline CSS -->
-        <link href="<?= base_url('public/css/timeline.css'); ?>" rel="stylesheet">
+        <!--<link href="<?= base_url('public/css/metisMenu.min.css'); ?>" rel="stylesheet">-->
 
         <!-- Custom CSS -->
         <link href="<?= base_url('public/css/sb-admin-2.css'); ?>" rel="stylesheet">
 
-        <!-- Morris Charts CSS -->
-        <link href="<?= base_url('public/css/morris.css'); ?>" rel="stylesheet">
-
         <!-- Custom Fonts -->
         <link href="<?= base_url('public/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
 
-        <link href="<?= base_url('public/img/favicon.ico'); ?>" rel="shortcut icon" type="image/x-icon">
+        <link href="<?= base_url('public/favicon.ico'); ?>" rel="shortcut icon" type="image/x-icon">
         <!--<link rel="icon" type="image/png" href="/images/mifavicon.png" />-->
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

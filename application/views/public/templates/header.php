@@ -11,11 +11,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/custom.css'); ?>">
-    <link rel="icon" type="image/icon" href="<?= base_url('public/img/favicon.ico'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/default.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/nivo-slider.css'); ?>">
+    <link rel="icon" type="image/icon" href="<?= base_url('public/favicon.ico'); ?>">
 </head>
 <body>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,10 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li><a href="<?= site_url('welcome/videos') ?>">Audio</a></li>
                     <li><a href="<?= site_url('welcome/videos') ?>">Videos</a></li>
                     <li><a href="<?= site_url('welcome/videos') ?>">Ventas</a></li>
-                    <li class="iconos">
-                        <a href="https://web.facebook.com/BERAKAH_ministerio-273035953048021/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-                    </li>
-	            <?php if ($this->session->userdata('is_logued')) { ?>
+	            <?php if ($this->session->userdata('logued')) { ?>
                     <li class="dropdown iconos">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw fa-2x"></i>  <i class="fa fa-caret-down"></i>

@@ -1,32 +1,24 @@
-body {
-	padding-top: 50px;
-}
-
-.marketing {
-	padding-top: 40px;
-}
-
 .center {
-	margin-left: auto;
-	margin-top: auto;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 .iconos {
-	margin-top: -10px;
-	bottom: -6px;
+    margin-top: -10px;
+    bottom: -6px;
 }
 
 .item img {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login {
-	margin-top: 50px;
-	margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 span.error {
-	color: red;
-	background: red;
+    color: red;
+    background: red;
 }
