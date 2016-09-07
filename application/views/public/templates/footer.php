@@ -16,19 +16,11 @@
                         </li>
                     </ul>
                     <!--<p class="pull-right"><a href="#">Arriba</a></p>-->
-                    <p class="copyright text-muted">Copyrigth &copy; 2016 Alejandra Company, Inc.</p>
+                    <p class="text-center">Copyrigth &copy; 2016 Alejandra Company, Inc.</p>
+                    <p class="text-center">ale.r1611@gmail.com - almanza.danny@gmail.com</p>
                 </div>
             </div>
         </div><!-- /.container --> 
     </footer><!-- footer -->
-
-    <script type="text/javascript" src="<?= base_url('public/js/jquery.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?= base_url('public/js/bootstrap.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?= base_url('public/js/jquery.nivo.slider.js') ?>"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $('#slider').nivoSlider();
-        });
-    </script>
 </body>
 </html>

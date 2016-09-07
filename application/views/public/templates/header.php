@@ -14,6 +14,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/default.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('public/css/nivo-slider.css'); ?>">
     <link rel="icon" type="image/icon" href="<?= base_url('public/favicon.ico'); ?>">
+
+    <script type="text/javascript" src="<?= base_url('public/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('public/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?= base_url('public/js/jquery.nivo.slider.js') ?>"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script>
 </head>
 <body>
     <!-- Fixed navbar -->
@@ -26,17 +35,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?= base_url(); ?>">Arca Producciones</a>
+                <a class="navbar-brand" href="<?= base_url(); ?>">
+                    <img src="<?= base_url('public/img/logo.jpg') ?>" class="logo img-circle">
+                </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?= base_url() ?>">Inicio</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Quienes Somos</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Cursos</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Contactos</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Audio</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Videos</a></li>
-                    <li><a href="<?= site_url('welcome/videos') ?>">Ventas</a></li>
+                    <li><a href="#">Quienes Somos</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Multimedia <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?= site_url('welcome/audios') ?>">Audio</a>
+                            </li>
+                            <li><a href="<?= site_url('welcome/videos') ?>">Video</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <li><a href="#">Ventas</a></li>
+                    <li><a href="#">Contactos</a></li>
 	            <?php if ($this->session->userdata('logued')) { ?>
                     <li class="dropdown iconos">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">

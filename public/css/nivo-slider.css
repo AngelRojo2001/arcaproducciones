@@ -89,25 +89,24 @@
 }
 /* Direction nav styles (e.g. Next & Prev) */
 .nivo-directionNav a {
-	position:absolute;
-	top:45%;
-	z-index:9;
-	cursor:pointer;
+    position:absolute;
+    top:45%;
+    z-index:9;
+    cursor:pointer;
 }
 .nivo-prevNav {
-	left:0px;
+    left:0px;
 }
 .nivo-nextNav {
-	right:0px;
+    right:0px;
 }
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
-	text-align:center;
-	
+    text-align:center;	
 }
 .nivo-controlNav a {
-	cursor:pointer;
+    cursor:pointer;
 }
 .nivo-controlNav a.active {
-	font-weight:bold;
+    font-weight:bold;
 }

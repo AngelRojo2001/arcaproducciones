@@ -8,6 +8,7 @@ class Publicacion_model extends CI_Model {
     public $subtitulo;
     public $descripcion;
     public $imagen;
+    public $categoria;
     public $fechapub;
     public usuario_id;*/
     
@@ -29,6 +30,7 @@ class Publicacion_model extends CI_Model {
             'subtitulo' => $this->input->post('subtitulo'),
             'descripcion' => $this->input->post('descripcion'),
             'imagen' => $imagen,
+            'categoria' => $this->input->post('categoria'),
             'fechapub' => now('America/La_Paz'),
             'usuario_id' => $this->session->userdata('id')
         );
@@ -41,6 +43,7 @@ class Publicacion_model extends CI_Model {
             'subtitulo' => $this->input->post('subtitulo'),
             'descripcion' => $this->input->post('descripcion'),
             'fechapub' => now('America/La_Paz'),
+            'categoria' => $this->input->post('categoria'),
             'usuario_id' => $this->session->userdata('id')
         );
         if ($imagen != NULL) {
