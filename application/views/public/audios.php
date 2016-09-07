@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row featurette">
-        <div class="col-md-3">
+        <div class="col-sm-3">
             <div class="col-lg-12" id="menu">
                 <div class="table-responsive">
                     <table class="table table-hover table-condensed">
@@ -27,7 +27,7 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
-        <div class="col-md-9">
+        <div class="col-sm-9">
             <div class="col-lg-12" id="mostrar-audio">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-condensed">

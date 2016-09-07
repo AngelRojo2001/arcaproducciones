@@ -22,29 +22,46 @@ body {
     margin-bottom: 50px;
 }
 
-.logo {
-    height: 60px;
-    margin-top: -8px;
+@media (max-width: 700px) {
+    .logo {
+        height: 40px;
+    }
 }
 
-span.error {
-    color: red;
-    background: red;
+.navbar-brand {
+    padding-top: 5px;
 }
 
-.navbar {
-    /*background-color: #204d74;*/
-    /*background-color: #51296d;*/
+.navbar-inverse {
     background-color: #6f5499;
-    height: 80px;
+}
+.navbar-inverse .navbar-nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.navbar-nav {
-    margin-top: 15px;
+.navbar-inverse .navbar-nav>li>a{
+    color: #fff;
 }
 
-#navbar a {
-    color: white;
+.dropdown .open {
+    background-color: red;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #ffc507;
+}
+
+.navbar-inverse .navbar-nav .dropdown .dropdown-menu>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav .dropdown .dropdown-menu>li>a:hover {
+    color: #ffc507;
+    background-color: #6f5499;
+}
+
+.navbar-inverse .navbar-nav .dropdown-menu {
     background-color: #6f5499;
 }
 
