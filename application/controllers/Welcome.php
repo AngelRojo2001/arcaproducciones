@@ -35,4 +35,18 @@ class Welcome extends CI_Controller {
         $this->load->view('public/audios2', $data);
         //
     }
+
+    public function cursos() {
+        $this->load->model('publicacion_model');
+        $data['title'] = 'Cursos';
+        $data['publicaciones'] = $this->publicacion_model->get('Cursos');
+        $this->load->view('public/cursos_ventas', $data);
+    }
+
+    public function ventas() {
+        $this->load->model('publicacion_model');
+        $data['title'] = 'Ventas';
+        $data['publicaciones'] = $this->publicacion_model->get('Ventas');
+        $this->load->view('public/cursos_ventas', $data);
+    }
 }

@@ -26,6 +26,9 @@ body {
     .logo {
         height: 40px;
     }
+    body {
+        margin-top: 55px;
+    }
 }
 
 .navbar-brand {

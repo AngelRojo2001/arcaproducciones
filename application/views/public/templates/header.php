@@ -43,7 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?= base_url() ?>">Inicio</a></li>
                     <li><a href="#">Quienes Somos</a></li>
-                    <li><a href="#">Cursos</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Multimedia <i class="fa fa-caret-down"></i>
@@ -54,9 +53,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="<?= site_url('welcome/videos') ?>">Video</a>
                             </li>
                         </ul>
-                        <!-- /.dropdown-user -->
                     </li>
-                    <li><a href="#">Ventas</a></li>
+                    <li><a href="<?= site_url('welcome/cursos') ?>">Cursos</a></li>
+                    <li><a href="<?= site_url('welcome/ventas') ?>">Ventas</a></li>
                     <li><a href="#">Contactos</a></li>
 	            <?php if ($this->session->userdata('logued')) { ?>
                     <li class="dropdown iconos">

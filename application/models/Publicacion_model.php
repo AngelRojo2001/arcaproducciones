@@ -12,7 +12,10 @@ class Publicacion_model extends CI_Model {
     public $fechapub;
     public usuario_id;*/
     
-    public function get() {
+    public function get($categoria = NULL) {
+        if ($categoria != NULL) {
+            $this->db->where('categoria', $categoria);
+        }
         $this->db->order_by('fechapub', 'DESC');
         $query = $this->db->get('publicacion');
         return $query->result();
