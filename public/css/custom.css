@@ -1,5 +1,12 @@
 body {
     margin-top: 80px;
+    background:linear-gradient(70deg, #68469d,violet,#9fc66d, #698249);
+    /*background: url(../img/fondo4.jpeg) no-repeat fixed;*/
+}
+
+.marketing {
+    padding-top: 10px; 
+    background: rgba(230,230,230,0.8);
 }
 
 .center {
